@@ -1,2 +1,4 @@
 #sketches of JavaScript
-to do: start using quokka
+start using quokka done;  
+to do: work on console.log scope;  
+to do: loops;  

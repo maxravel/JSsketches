@@ -1,4 +1,4 @@
-//function
+// function
 // function greeting(){
 //     return 'Hello World!';
 // }
@@ -21,3 +21,26 @@
 //     return x + y;
 // }
 // console.log(add(3,4));
+
+//scope A
+// const favoriteColor = () => {
+//     //scope B
+//     const otherColor = () => {
+//         //scope C
+//         const lastColor = () => {
+//            //scope D 
+//         };
+//     };
+// };
+
+//scope A
+const myName = () => {
+    //scope B
+    const name = "lara";
+    const herName = () => {
+        //scope C, we can access name here
+        console.log(name);
+    };
+};
+
+
