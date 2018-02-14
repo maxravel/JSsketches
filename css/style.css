@@ -1,0 +1,16 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.box{
+    margin:auto;
+    margin-top:20px;
+    background-color:yellow;
+    height:300px;
+    width:500px;
+}
+
+#con{
+    padding:10px;
+}
