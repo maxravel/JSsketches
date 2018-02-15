@@ -69,4 +69,24 @@ const con = document.querySelector('#con');
 // while(i>0);
 
 // for loop
+// let num='';
+// for(let i=0;i<10;i++){
+//     num=num+i;
+// }
+// console.log(num);
 
+//break statement
+// for(let i=0;i<10;i++){
+//     if(i===5){
+//         break;
+//     }
+//     console.log(i);
+// }
+
+//continue statement (contnue loop without if statement)
+// for(let i=0;i<10;i++){
+//     if(i===4){
+//         continue;
+//     }
+//     console.log(i);
+// }
