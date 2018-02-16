@@ -90,3 +90,21 @@ const con = document.querySelector('#con');
 //     }
 //     console.log(i);
 // }
+
+//array
+const groceryList = ['milk','sugar','eggs','water'];
+
+//add item
+groceryList.push('yogurt');
+
+//add item to the fron of array
+groceryList.unshift('salt');
+
+//removes fron the end of array
+groceryList.pop();
+
+//removes from the front of array
+groceryList.shift();
+
+
+console.log(groceryList[1]);
