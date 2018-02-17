@@ -83,7 +83,7 @@ const con = document.querySelector('#con');
 //     console.log(i);
 // }
 
-//continue statement (contnue loop without if statement)
+// continue statement (contnue loop without if statement)
 // for(let i=0;i<10;i++){
 //     if(i===4){
 //         continue;
@@ -92,19 +92,37 @@ const con = document.querySelector('#con');
 // }
 
 //array
-const groceryList = ['milk','sugar','eggs','water'];
+// const groceryList = ['milk','sugar','eggs','water'];
 
 //add item
-groceryList.push('yogurt');
+// groceryList.push('yogurt');
 
 //add item to the fron of array
-groceryList.unshift('salt');
+// groceryList.unshift('salt');
 
 //removes fron the end of array
-groceryList.pop();
+// groceryList.pop();
 
 //removes from the front of array
-groceryList.shift();
+// groceryList.shift();
+
+// console.log(groceryList[1]);
+
+//counter of letters, remember that you can use [i] iteration for string type; 
+const text = document.querySelector('#text');
+const letter = document.querySelector('#letter');
+const answer = document.querySelector('#answer');
+const submit = document.querySelector('#submit');
+let counter = 0;
 
 
-console.log(groceryList[1]);
+submit.addEventListener('click', function(){
+    for(let i=0;i<text.value.length;i++){
+        if(text.value[i]===letter.value){
+            counter++
+        }
+    }
+    answer.innerText=counter;
+    console.log(counter);
+    counter=0;
+})

@@ -14,3 +14,16 @@
 #con{
     padding:10px;
 }
+
+p{
+    margin:10px;
+}
+
+input{
+    margin:10px;
+    width:50%;
+}
+
+#submit{
+    width:25%;
+}
