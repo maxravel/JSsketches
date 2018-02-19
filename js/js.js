@@ -1,3 +1,27 @@
+// switch statement
+// let day=2;
+// switch(day){
+//     case 1: case 2:
+//     console.log('hard start of week');
+//     break;
+
+//     case 3: case 4:
+//     console.log('be cool');
+//     break;
+
+//     case 5: case 6: case 7:
+//     console.log('relax');
+//     break;
+
+//     case undefined:
+//     console.log('undefined');
+//     break;
+
+//     default:
+//     console.log('put number of day');
+// }
+
+
 // function
 // function greeting(){
 //     return 'Hello World!';
@@ -21,6 +45,7 @@
 //     return x + y;
 // }
 // console.log(add(3,4));
+
 
 //scope A
 // const favoriteColor = () => {
@@ -48,6 +73,7 @@ const con = document.querySelector('#con');
 //     // con.innerText=herName();
 // };
 // myName();
+
 
 //LOOPs
 //while loop
@@ -91,6 +117,7 @@ const con = document.querySelector('#con');
 //     console.log(i);
 // }
 
+
 //array
 // const groceryList = ['milk','sugar','eggs','water'];
 
@@ -108,13 +135,13 @@ const con = document.querySelector('#con');
 
 // console.log(groceryList[1]);
 
+
 //counter of letters, remember that you can use [i] iteration for string type; 
 const text = document.querySelector('#text');
 const letter = document.querySelector('#letter');
 const answer = document.querySelector('#answer');
 const submit = document.querySelector('#submit');
 let counter = 0;
-
 
 submit.addEventListener('click', function(){
     for(let i=0;i<text.value.length;i++){
