@@ -22,6 +22,7 @@
 // }
 
 
+
 // function
 // function greeting(){
 //     return 'Hello World!';
@@ -47,6 +48,7 @@
 // console.log(add(3,4));
 
 
+
 //scope A
 // const favoriteColor = () => {
 //     //scope B
@@ -59,7 +61,7 @@
 // };
 
 //scope A
-const con = document.querySelector('#con');
+// const con = document.querySelector('#con');
 // const name = "lara";
 // const myName = () => {
 //     //scope B
@@ -73,6 +75,7 @@ const con = document.querySelector('#con');
 //     // con.innerText=herName();
 // };
 // myName();
+
 
 
 //LOOPs
@@ -118,6 +121,7 @@ const con = document.querySelector('#con');
 // }
 
 
+
 //array
 // const groceryList = ['milk','sugar','eggs','water'];
 
@@ -132,8 +136,120 @@ const con = document.querySelector('#con');
 
 //removes from the front of array
 // groceryList.shift();
-
 // console.log(groceryList[1]);
+
+// console.log(groceryList.sort());
+// console.log(groceryList.reverse());
+
+
+
+//NaN
+// // let a = "apple";
+// let a = 3;
+// let b = 5;
+// if(isNaN(a)){
+//     console.log("is NaN");
+// }
+// else {
+//     console.log(a*b);
+// }
+
+
+
+//Strings
+// let myString = "I\'m a string"; //     \ - this is for that ' not closing string
+// console.log(myString);
+// console.log(myString.length);
+// console.log(myString.toUpperCase());
+// console.log(myString.toLowerCase());
+// console.log(myString.indexOf('string'));
+// console.log(myString.indexOf('nostring')); // returns -1
+
+//String Comparision
+// let string1 = "abc";
+// let string2 = "bcd";
+// console.log(string1<string2); // true
+
+//String methods
+// let str = "Hello World";
+// let str2 = str.slice(2,8);
+// console.log(str2);
+// let food = "milk, water, pomodoro, meat";
+// let foodArr = food.split(', ');
+// console.log(foodArr);
+// let myString = new String();
+// console.log(typeof(myString));
+// console.log(typeof('abc'));
+
+
+
+//Objects
+const car = new Object();
+car.speed = 50;
+car.color = "red";
+car.weight = 1000;
+console.log(car.color);
+car.drive = function(){
+    console.log('now driving');
+};
+car.drive(); // () - when calling methods
+
+const car2 = {
+    drive: function(speed,time){
+        console.log(speed*time);
+    },
+    driver: "marlon",
+    color : "blue",
+    speed : 45,
+    test : function(){
+        console.log(this);
+    },
+    logDriver: function(){
+        console.log('this car driver is '+this.driver);
+    },
+}
+car2.speed = 34;  // you can change values of const object properties
+console.log(car2.speed);
+car2.drive(50,3);
+
+//THIS keyword
+console.log(this); // console log window object
+car2.test();
+car2.logDriver();
+
+//Constructor function - starts with capital letter
+let Car = function(maxSpeed, driver){
+    this.maxSpeed = maxSpeed;
+    this.driver = driver;
+    this.drive = function(speed,time){
+        console.log(speed*time);
+    }
+    this.logDriver = function(){
+        console.log('this car driver is '+this.driver);
+    }
+};
+
+var car17 = new Car(50,"elton");
+console.log(car17);
+car17.logDriver()
+
+//DATE object
+let myDate  =new Date();
+console.log(myDate);
+
+let pastDate = new Date(1523,11,2,10,23,43); 
+let futureDate = new Date(2077,0,3,0,2,34); // 0 - january
+console.log(pastDate);
+console.log(futureDate);
+
+let Birthday = new Date(1993,2,25,6,0,0);
+console.log(Birthday.getMonth());
+console.log(Birthday.getFullYear());
+console.log(Birthday.getDate());
+console.log(Birthday.getDay()); // gets day of week 0-6; 0 -sunday
+console.log(Birthday.getHours());
+console.log(Birthday.getTime()); // gets number of miliseconds since 1st Jan 1970
+
 
 
 //counter of letters, remember that you can use [i] iteration for string type; 
