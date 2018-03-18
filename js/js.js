@@ -184,71 +184,71 @@
 
 
 //Objects
-const car = new Object();
-car.speed = 50;
-car.color = "red";
-car.weight = 1000;
-console.log(car.color);
-car.drive = function(){
-    console.log('now driving');
-};
-car.drive(); // () - when calling methods
+// const car = new Object();
+// car.speed = 50;
+// car.color = "red";
+// car.weight = 1000;
+// console.log(car.color);
+// car.drive = function(){
+//     console.log('now driving');
+// };
+// car.drive(); // () - when calling methods
 
-const car2 = {
-    drive: function(speed,time){
-        console.log(speed*time);
-    },
-    driver: "marlon",
-    color : "blue",
-    speed : 45,
-    test : function(){
-        console.log(this);
-    },
-    logDriver: function(){
-        console.log('this car driver is '+this.driver);
-    },
-}
-car2.speed = 34;  // you can change values of const object properties
-console.log(car2.speed);
-car2.drive(50,3);
+// const car2 = {
+//     drive: function(speed,time){
+//         console.log(speed*time);
+//     },
+//     driver: "marlon",
+//     color : "blue",
+//     speed : 45,
+//     test : function(){
+//         console.log(this);
+//     },
+//     logDriver: function(){
+//         console.log('this car driver is '+this.driver);
+//     },
+// }
+// car2.speed = 34;  // you can change values of const object properties
+// console.log(car2.speed);
+// car2.drive(50,3);
 
 //THIS keyword
-console.log(this); // console log window object
-car2.test();
-car2.logDriver();
+// console.log(this); // console log window object
+// car2.test();
+// car2.logDriver();
 
 //Constructor function - starts with capital letter
-let Car = function(maxSpeed, driver){
-    this.maxSpeed = maxSpeed;
-    this.driver = driver;
-    this.drive = function(speed,time){
-        console.log(speed*time);
-    }
-    this.logDriver = function(){
-        console.log('this car driver is '+this.driver);
-    }
-};
+// let Car = function(maxSpeed, driver){
+//     this.maxSpeed = maxSpeed;
+//     this.driver = driver;
+//     this.drive = function(speed,time){
+//         console.log(speed*time);
+//     }
+//     this.logDriver = function(){
+//         console.log('this car driver is '+this.driver);
+//     }
+// };
 
-var car17 = new Car(50,"elton");
-console.log(car17);
-car17.logDriver()
+// var car17 = new Car(50,"elton");
+// console.log(car17);
+// car17.logDriver()
 
 //DATE object
-let myDate  =new Date();
-console.log(myDate);
+// let myDate  =new Date();
+// console.log(myDate);
 
-let pastDate = new Date(1523,11,2,10,23,43); 
-let futureDate = new Date(2077,0,3,0,2,34); // 0 - january
-console.log(pastDate);
-console.log(futureDate);
+// let pastDate = new Date(1523,11,2,10,23,43); 
+// let futureDate = new Date(2077,0,3,0,2,34); // 0 - january
+// console.log(pastDate);
+// console.log(futureDate);
 
-let Birthday = new Date(1993,2,25,6,0,0);
-console.log(Birthday.getMonth());
-console.log(Birthday.getFullYear());
-console.log(Birthday.getDate());
-console.log(Birthday.getDay()); // gets day of week 0-6; 0 -sunday
-console.log(Birthday.getHours());
-console.log(Birthday.getTime()); // gets number of miliseconds since 1st Jan 1970
+// let Birthday = new Date(1993,2,25,6,0,0);
+// console.log(Birthday.getMonth());
+// console.log(Birthday.getFullYear());
+// console.log(Birthday.getDate());
+// console.log(Birthday.getDay()); // gets day of week 0-6; 0 -sunday
+// console.log(Birthday.getHours());
+// console.log(Birthday.getTime()); // gets number of miliseconds since 1st Jan 1970
 
 
 
