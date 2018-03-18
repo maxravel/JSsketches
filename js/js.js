@@ -252,6 +252,36 @@
 
 
 
+//TIMERS
+const colorBox = document.querySelector('#colorBox');
+const colors = ["black", "green", "blue", "pink"];
+let i = 0;
+function colorChange(){
+    if(i===colors.length){
+        i=0;
+    }
+    colorBox.style.background = colors[i];
+    i++;
+
+    //setTimeout(colorChange, 3000);
+}
+
+let changer = setInterval(colorChange, 1000);
+
+colorBox.addEventListener('click', function(){
+    
+    if(changer !== 0){
+        clearInterval(changer);
+        changer = 0;
+    }
+    else{
+        changer = setInterval(colorChange, 1000);
+    }
+    console.log(changer);
+})
+
+
+
 //counter of letters, remember that you can use [i] iteration for string type; 
 const text = document.querySelector('#text');
 const letter = document.querySelector('#letter');

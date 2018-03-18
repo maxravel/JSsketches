@@ -3,6 +3,25 @@
     padding:0px;
 }
 
+.section1{
+    height:30vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#info{
+    position:absolute;
+    top:10px;
+    margin:auto;
+}
+
+#colorBox{
+    height:100px;
+    width:100px;
+    border:solid 3px black;
+}
+
 .box{
     margin:auto;
     margin-top:20px;
