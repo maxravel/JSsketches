@@ -218,6 +218,18 @@
 // car2.logDriver();
 
 //Constructor function - starts with capital letter
+
+// const name1 = "Jeff";
+// const name2 = new String("Jeff");
+// console.log(typeof name1 + " " + typeof name2);
+// const item1 = new Number(5);
+// const item2 = new Boolean(true);
+// const item3 = new Function('x','y','return x+y');
+// console.log(item3(1,2));
+// const item4 = new Object({name:"Andy"});
+// const item5 = new Array(1,2,3,4);
+// console.log(item5);
+
 // let Car = function(maxSpeed, driver){
 //     this.maxSpeed = maxSpeed;
 //     this.driver = driver;
@@ -233,8 +245,27 @@
 // console.log(car17);
 // car17.logDriver()
 
+
+//person constructor
+
+// function Person(name, dob){
+//     this.name = name;
+//     this.birthday = new Date(dob);
+//     this.calculateAge = function(){
+//         const diff = Date.now() - this.birthday.getTime();
+//         const ageDate = new Date(diff);
+//         return Math.abs(ageDate.getUTCFullYear() -1970);
+//         // console.log(diff);
+//     }
+// }
+
+// const brad = new Person('brad', '03-25-1993');
+// console.log(brad.calculateAge());
+
+
+
 //DATE object
-// let myDate  =new Date();
+// let myDate = new Date();
 // console.log(myDate);
 
 // let pastDate = new Date(1523,11,2,10,23,43); 
@@ -242,13 +273,14 @@
 // console.log(pastDate);
 // console.log(futureDate);
 
-// let Birthday = new Date(1993,2,25,6,0,0);
+let Birthday = new Date(1993,2,25,6,0,0);
 // console.log(Birthday.getMonth());
 // console.log(Birthday.getFullYear());
 // console.log(Birthday.getDate());
 // console.log(Birthday.getDay()); // gets day of week 0-6; 0 -sunday
 // console.log(Birthday.getHours());
 // console.log(Birthday.getTime()); // gets number of miliseconds since 1st Jan 1970
+console.log(Birthday.getUTCFullYear());
 
 
 
