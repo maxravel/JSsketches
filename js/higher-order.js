@@ -11,7 +11,7 @@ const companies = [
 ];
 
 
-const ages = [32, 15, 45, 97, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 89];
+const ages = [5, 12, 32, 15, 45, 97, 7, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 89];
 
 // //forEach 
 // for(let f=0; f<companies.length; f++){
@@ -128,10 +128,9 @@ const ages = [32, 15, 45, 97, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 89];
 
 // //Combine Methods
 // const combined = ages
-//     .map(age => age*2)
-//     .filter(age => age>=40)
-//     .sort((a,b) => a-b)
-//     .reduce((a,b) => a+b, 0);
-
+//     .map(age => age*2) //multiple by 2 all ages
+//     .filter(age => age>=40) //filter, only higher than 40
+//     .sort((a,b) => a-b) //sort
+//     .reduce((a,b) => a+b, 0); //sum all ages
 
 // console.log(combined);

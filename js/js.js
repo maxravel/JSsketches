@@ -255,7 +255,6 @@
 //         const diff = Date.now() - this.birthday.getTime();
 //         const ageDate = new Date(diff);
 //         return Math.abs(ageDate.getUTCFullYear() -1970);
-//         // console.log(diff);
 //     }
 // }
 
@@ -273,14 +272,14 @@
 // console.log(pastDate);
 // console.log(futureDate);
 
-let Birthday = new Date(1993,2,25,6,0,0);
+// let Birthday = new Date(1993,2,25,6,0,0);
 // console.log(Birthday.getMonth());
 // console.log(Birthday.getFullYear());
 // console.log(Birthday.getDate());
 // console.log(Birthday.getDay()); // gets day of week 0-6; 0 -sunday
 // console.log(Birthday.getHours());
 // console.log(Birthday.getTime()); // gets number of miliseconds since 1st Jan 1970
-console.log(Birthday.getUTCFullYear());
+// console.log(Birthday.getUTCFullYear());
 
 
 
@@ -324,7 +323,7 @@ let counter = 0;
 submit.addEventListener('click', function(){
     for(let i=0;i<text.value.length;i++){
         if(text.value[i]===letter.value){
-            counter++
+            counter++;
         }
     }
     answer.innerText=counter;
