@@ -1,4 +1,4 @@
-// switch statement
+// **********************switch statement*******************
 // let day=2;
 // switch(day){
 //     case 1: case 2:
@@ -23,7 +23,7 @@
 
 
 
-// function
+// ***********************function****************************8
 // function greeting(){
 //     return 'Hello World!';
 // }
@@ -49,6 +49,7 @@
 
 
 
+//***********************SCOPE
 //scope A
 // const favoriteColor = () => {
 //     //scope B
@@ -78,7 +79,7 @@
 
 
 
-//LOOPs
+// **********************************************LOOPs
 //while loop
 // let i = 10;
 // let a=[];
@@ -122,7 +123,7 @@
 
 
 
-//array
+// ********************************** ARRAY
 // const groceryList = ['milk','sugar','eggs','water'];
 
 //add item
@@ -143,7 +144,7 @@
 
 
 
-//NaN
+// ************************************ NaN
 // // let a = "apple";
 // let a = 3;
 // let b = 5;
@@ -156,7 +157,7 @@
 
 
 
-//Strings
+// ************************************ STRINGS
 // let myString = "I\'m a string"; //     \ - this is for that ' not closing string
 // console.log(myString);
 // console.log(myString.length);
@@ -183,7 +184,7 @@
 
 
 
-//Objects
+// ************************************ OBJECTS
 // const car = new Object();
 // car.speed = 50;
 // car.color = "red";
@@ -246,7 +247,8 @@
 // car17.logDriver()
 
 
-//person constructor
+
+// ***************************(person) CONSTRUCTOR
 
 // function Person(name, dob){
 //     this.name = name;
@@ -263,7 +265,7 @@
 
 
 
-//DATE object
+// *********************************** DATE OBJECT
 // let myDate = new Date();
 // console.log(myDate);
 
