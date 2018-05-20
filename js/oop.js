@@ -1,17 +1,61 @@
 //**************************CONSTRUCTORS***********************
-// function Person(first, last, age, eye) {
+// function Person(first, last, age, eye, dob) {
 //     this.firstName = first;
 //     this.lastName = last;
 //     this.age = age;
 //     this.eyeColor = eye;
+//     this.dob = new Date(dob);
+//     this.calculateAge = function(){
+//         const diff = Date.now() - this.dob.getTime();
+//         const ageDate = new Date(diff);
+//         return ageDate.getUTCFullYear() -1970;
+//     }
 // }
 
-// var myFather = new Person("John", "Doe", 50, "blue");
-// var myMother = new Person("Sally", "Rally", 48, "green");
+// var myFather = new Person("John", "Doe", 50, "blue", "3/25/1993");
+// var myMother = new Person("Sally", "Rally", 48, "green", "10/10/1963");
 
-// console.log(myFather);
+// console.log(myFather.calculateAge());
 // console.log(myMother);
 
+
+
+//*****************************PROTOTYPES *************************
+//Object.prototype
+function Person(first, last, dob) {
+    this.firstName = first;
+    this.lastName = last;
+    this.dob = new Date(dob);
+    // this.calculateAge = function(){
+    //     const diff = Date.now() - this.dob.getTime();
+    //     const ageDate = new Date(diff);
+    //     return ageDate.getUTCFullYear() -1970;
+    // }
+}
+
+Person.prototype.calculateAge = function(){
+    const diff = Date.now() - this.dob.getTime();
+    const ageDate = new Date(diff);
+    return ageDate.getUTCFullYear() -1970;
+}
+
+Person.prototype.getFullName = function(){
+    return `${this.firstName} ${this.lastName}`;
+}
+
+Person.prototype.getsMarried = function(newLast){
+    this.lastName = newLast;
+}
+
+const one = new Person("John", "Doe", "3/25/1993");
+const two = new Person("Sally", "Rally", "10/10/1963");
+
+console.log(one);
+console.log(one.calculateAge());
+console.log(two.getFullName());
+
+two.getsMarried("Sachs");
+console.log(two.getFullName());
 
 //**************************CLASSESS***********************
 
