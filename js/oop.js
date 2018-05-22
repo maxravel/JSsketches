@@ -22,40 +22,85 @@
 
 //*****************************PROTOTYPES *************************
 //Object.prototype
-function Person(first, last, dob) {
-    this.firstName = first;
-    this.lastName = last;
-    this.dob = new Date(dob);
-    // this.calculateAge = function(){
-    //     const diff = Date.now() - this.dob.getTime();
-    //     const ageDate = new Date(diff);
-    //     return ageDate.getUTCFullYear() -1970;
-    // }
+// function Person(first, last, dob) {
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.dob = new Date(dob);
+//     // this.calculateAge = function(){
+//     //     const diff = Date.now() - this.dob.getTime();
+//     //     const ageDate = new Date(diff);
+//     //     return ageDate.getUTCFullYear() -1970;
+//     // }
+// }
+
+// Person.prototype.calculateAge = function(){
+//     const diff = Date.now() - this.dob.getTime();
+//     const ageDate = new Date(diff);
+//     return ageDate.getUTCFullYear() -1970;
+// }
+
+// Person.prototype.getFullName = function(){
+//     return `${this.firstName} ${this.lastName}`;
+// }
+
+// Person.prototype.getsMarried = function(newLast){
+//     this.lastName = newLast;
+// }
+
+// const one = new Person("John", "Doe", "3/25/1993");
+// const two = new Person("Sally", "Rally", "10/10/1963");
+
+// console.log(one);
+// console.log(one.calculateAge());
+// console.log(two.getFullName());
+
+// two.getsMarried("Sachs");
+// console.log(two.getFullName());
+
+
+//*******************************PROTOTYPE INHERITANCE ******************** */
+
+function Person(firstName, lastName){
+    this.firstName = firstName; 
+    this.lastName = lastName;
 }
 
-Person.prototype.calculateAge = function(){
-    const diff = Date.now() - this.dob.getTime();
-    const ageDate = new Date(diff);
-    return ageDate.getUTCFullYear() -1970;
+//Greeting
+Person.prototype.greeting = function(){
+    return `hello ${this.firstName} ${this.lastName}`;
 }
 
-Person.prototype.getFullName = function(){
-    return `${this.firstName} ${this.lastName}`;
+const personOne = new Person("John","Doe");
+
+console.log(personOne.greeting());
+
+//customer constructor
+function Customer(firstName, lastName, phone, membership){
+    //we can call other constructor
+    Person.call(this, firstName, lastName);
+    this.phone = phone;
+    this.membership = membership;
 }
 
-Person.prototype.getsMarried = function(newLast){
-    this.lastName = newLast;
-}
+//Inherit the person method
+Customer.prototype = Object.create(Person.prototype);
 
-const one = new Person("John", "Doe", "3/25/1993");
-const two = new Person("Sally", "Rally", "10/10/1963");
+//Make Customer.prototype return Customer
+Customer.prototype.constructor = Customer;
 
-console.log(one);
-console.log(one.calculateAge());
-console.log(two.getFullName());
+const customer1 = new Customer('tom','peres','555444333','yes');
+console.log(customer1);
+//this don't work without inherit
+console.log(customer1.greeting());
 
-two.getsMarried("Sachs");
-console.log(two.getFullName());
+Customer.prototype.greeting = function(){
+    return `hello ${this.firstName} ${this.lastName} welcome here`;
+};
+console.log(customer1.greeting());
+
+
+
+// OBJECT.CREATE
 
 //**************************CLASSESS***********************
 
@@ -121,32 +166,32 @@ console.log(two.getFullName());
 
 //************************METHOD CHAINING***********************
 // userI.login().logout(); <-- this don't work
-class User{
-    constructor(email,name){
-        this.email = email;
-        this.name = name;
-        this.score = 0;
-    } //in classes we don't need a coma here
-    login(){
-        console.log(this.email, 'just logged in');
-        return this;
-    }
-    logout(){
-        console.log(this.email, 'just logged out');
-        return this;
-    }
-    updateScore(){
-        this.score++;
-        console.log(this.email, ' score is now: ', this.score);
-        return this; // by returning this we can do new methods on user and chaining method works
-    }
-}
+// class User{
+//     constructor(email,name){
+//         this.email = email;
+//         this.name = name;
+//         this.score = 0;
+//     } //in classes we don't need a coma here
+//     login(){
+//         console.log(this.email, 'just logged in');
+//         return this;
+//     }
+//     logout(){
+//         console.log(this.email, 'just logged out');
+//         return this;
+//     }
+//     updateScore(){
+//         this.score++;
+//         console.log(this.email, ' score is now: ', this.score);
+//         return this; // by returning this we can do new methods on user and chaining method works
+//     }
+// }
 
-var userI = new User('abc@gmail.com','alex');
-var userII = new User("def@gmail.com","addy");
+// var userI = new User('abc@gmail.com','alex');
+// var userII = new User("def@gmail.com","addy");
 
-userI.updateScore();
-userI.updateScore();
-userII.updateScore();
+// userI.updateScore();
+// userI.updateScore();
+// userII.updateScore();
 
-userI.login().updateScore().updateScore().logout();
+// userI.login().updateScore().updateScore().logout();
