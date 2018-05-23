@@ -58,49 +58,80 @@
 // console.log(two.getFullName());
 
 
+
 //*******************************PROTOTYPE INHERITANCE ******************** */
 
-function Person(firstName, lastName){
-    this.firstName = firstName; 
-    this.lastName = lastName;
-}
+// function Person(firstName, lastName){
+//     this.firstName = firstName; 
+//     this.lastName = lastName;
+// }
 
-//Greeting
-Person.prototype.greeting = function(){
-    return `hello ${this.firstName} ${this.lastName}`;
-}
+// //Greeting
+// Person.prototype.greeting = function(){
+//     return `hello ${this.firstName} ${this.lastName}`;
+// }
 
-const personOne = new Person("John","Doe");
+// const personOne = new Person("John","Doe");
 
-console.log(personOne.greeting());
+// console.log(personOne.greeting());
 
-//customer constructor
-function Customer(firstName, lastName, phone, membership){
-    //we can call other constructor
-    Person.call(this, firstName, lastName);
-    this.phone = phone;
-    this.membership = membership;
-}
+// //customer constructor
+// function Customer(firstName, lastName, phone, membership){
+//     //we can call other constructor
+//     Person.call(this, firstName, lastName);
+//     this.phone = phone;
+//     this.membership = membership;
+// }
 
-//Inherit the person method
-Customer.prototype = Object.create(Person.prototype);
+// //Inherit the person method
+// Customer.prototype = Object.create(Person.prototype);
 
-//Make Customer.prototype return Customer
-Customer.prototype.constructor = Customer;
+// //Make Customer.prototype return Customer
+// Customer.prototype.constructor = Customer;
 
-const customer1 = new Customer('tom','peres','555444333','yes');
-console.log(customer1);
-//this don't work without inherit
-console.log(customer1.greeting());
+// const customer1 = new Customer('tom','peres','555444333','yes');
+// console.log(customer1);
+// //this don't work without inherit
+// console.log(customer1.greeting());
 
-Customer.prototype.greeting = function(){
-    return `hello ${this.firstName} ${this.lastName} welcome here`;
-};
-console.log(customer1.greeting());
+// Customer.prototype.greeting = function(){
+//     return `hello ${this.firstName} ${this.lastName} welcome here`;
+// };
+// console.log(customer1.greeting());
 
 
 
-// OBJECT.CREATE
+// ***************************************** OBJECT.CREATE *****************************8
+
+// const personPrototypes = {
+//     greeting: function(){
+//         return `Hello there ${this.firstName} ${this.lastName}`;
+//     },
+//     getsMarried: function(newLastName){
+//         this.lastName = newLastName;
+//     }
+// }
+
+// const mary = Object.create(personPrototypes);
+// mary.firstName = "Mary";
+// mary.lastName = "Smith";
+// mary.age = 20;
+
+// mary.getsMarried('Wilson');
+
+// console.log(mary);
+// console.log(mary.greeting());
+
+// const brad = Object.create(personPrototypes,{
+//     firstName: {value:"Andy"},
+//     lastName: {value:"Collins"},
+//     age: {value:30}
+// });
+
+// console.log(brad);
+// console.log(brad.greeting());
+
+
 
 //**************************CLASSESS***********************
 
@@ -148,20 +179,62 @@ console.log(customer1.greeting());
 //     logout(){
 //         console.log(this.email, 'just logged out');
 //     }
+
+//     static addNumbers(x,y){
+//         return x+y;
+//     }
 // }
 
 // var userI = new User('abc@gmail.com','alex');
 // var userII = new User("def@gmail.com","addy");
 
-// //the new keyword: 
-// // 1) creates new empty object {}
-// // 2) sets value of this to be the new empty object
-// // 3) calls the constructor method
+// // //the new keyword: 
+// // // 1) creates new empty object {}
+// // // 2) sets value of this to be the new empty object
+// // // 3) calls the constructor method
 
 // console.log(userI);
 // console.log(userII);
-// userI.login();
-// userII.logout();
+// // userI.login();
+// // userII.logout();
+
+// //static method not connected with userI or userII
+// console.log(User.addNumbers(2,3));
+
+
+
+//************************************ SUBCLASSES ********************/
+// class Person{
+//     constructor(firstName, lastName){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+
+//     greeting(){
+//         return `Hello there ${this.firstName} ${this.lastName}`;
+//     }
+// }
+
+// class Customer extends Person{
+//     constructor(firstName, lastName, phone, membership){
+//         //super() calls parent class constructor
+//         super(firstName, lastName);
+
+//         //defining everything which is new in subclass
+//         this.phone = phone;
+//         this.membership = membership;
+//     }
+
+//     static getMembershipCost(){
+//         return 500;
+//     }
+// }
+
+// const john = new  Customer('andy','wilis','55555555','yes');
+
+// console.log(john);
+// console.log(john.greeting());
+// console.log(Customer.getMembershipCost());
 
 
 //************************METHOD CHAINING***********************
