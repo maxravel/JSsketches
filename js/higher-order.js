@@ -1,7 +1,7 @@
 const companies = [
     {name: "company1", category: "finance", start: 1980, end:2005},
     {name: "company2", category: "auto", start: 1982, end:1993},
-    {name: "company3", category: "technology", start: 1995, end:20017},
+    {name: "company3", category: "technology", start: 1995, end:2017},
     {name: "company4", category: "finance", start: 1999, end:2014},
     {name: "company5", category: "finance", start: 1975, end:2002},
     {name: "company6", category: "auto", start: 1982, end:1999},
@@ -10,23 +10,27 @@ const companies = [
     {name: "company9", category: "technology", start: 1997, end:2009}
 ];
 
-
 const ages = [5, 12, 32, 15, 45, 97, 7, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 89];
 
-// //forEach 
+
+
+// //forEach: classical for, modern forEach and with array function
+
 // for(let f=0; f<companies.length; f++){
-//     console.log(companies[f]);
+//     console.log(companies[f].name);
 // }
 
 // companies.forEach(function(company){
-//     console.log(company);
+//     console.log(company.name);
 // })
 
+// companies.forEach(company => console.log(company.name));
 
 
-// //filter
 
+// //FILTER: classical for loop, and modern filter method with array function
 // //filter age>21
+
 // let canDrink =[];
 // for(let f=0;f<ages.length;f++){
 //     if(ages[f]>=21){
@@ -40,7 +44,6 @@ const ages = [5, 12, 32, 15, 45, 97, 7, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 
 //         return true;
 //     }
 // });
-
 // console.log(canDrink2);
 
 // const canDrink3 = ages.filter(age => age>=21);
@@ -66,12 +69,15 @@ const ages = [5, 12, 32, 15, 45, 97, 7, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 
 
 
 
-// //map
+// //MAP
 // //get company names and put in new array
 // const companyNames = companies.map(function(company){
 //     return company.name;
 // });
 // console.log(companyNames);
+
+// const companyNames2 = companies.map(company => company.name);
+// console.log(companyNames2);
 
 // //square ages
 // const agesSquare = ages.map(age => age*age);
@@ -79,20 +85,20 @@ const ages = [5, 12, 32, 15, 45, 97, 7, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 
 
 
 
-// //sort
+// //SORT
 // //sort companies by start year
 // const sortedCompanies = companies.sort(function(c1, c2){
 //     if(c1.start>c2.start){
 //         return 1;}
 //         else {
 //         return -1;}
-// });
+// }).map(company => company.start);
 // console.log(sortedCompanies);
 
 // const sortedCompanies2 = companies.sort((a,b) => (a.start > b.start ? 1 : -1));
 // console.log(sortedCompanies2);
 
-// //sort ages
+// //sort ages - ascending order
 // const sortedAges = ages.sort((a,b) => a-b);
 // console.log(sortedAges);
 
@@ -102,7 +108,7 @@ const ages = [5, 12, 32, 15, 45, 97, 7, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 
 
 
 
-// //reduce
+// //REDUCE
 // //sum ages
 // let agesSum = 0;
 // for(f=0; f<ages.length; f++){
@@ -124,9 +130,12 @@ const ages = [5, 12, 32, 15, 45, 97, 7, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 
 // },0);
 // console.log(totalYears);
 
+// const totalYears2 = companies.reduce((total,company) => total+(company.end-company.start),0);
+// console.log(totalYears2);
 
 
-// //Combine Methods
+
+// //COMBINE METHODS
 // const combined = ages
 //     .map(age => age*2) //multiple by 2 all ages
 //     .filter(age => age>=40) //filter, only higher than 40
