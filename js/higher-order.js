@@ -69,6 +69,16 @@ const ages = [5, 12, 32, 15, 45, 97, 7, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 
 
 
 
+// //FIND - return first element in array which fulfills condition
+// const first = companies.find(item => item.category === "auto");
+// console.log(first)
+
+// //with destructuring same example:
+// const first = companies.find(({category})=> category === "auto");
+// console.log(first)
+
+
+
 // //MAP
 // //get company names and put in new array
 // const companyNames = companies.map(function(company){
@@ -82,6 +92,20 @@ const ages = [5, 12, 32, 15, 45, 97, 7, 23, 44, 37, 67, 29, 30, 41, 48, 53, 10, 
 // //square ages
 // const agesSquare = ages.map(age => age*age);
 // console.log(agesSquare);
+
+// //using iteration
+// const array1 = [1,2,3,4,5]
+// const first = array1.map((element,i)=> element*i);
+// console.log(first) // returns 0,2,6,12,20
+
+// //next map example 
+// const companyList = companies.map(item =>
+//     `${item.name}||${item.category}||${item.end}`);
+// console.log(companyList)
+// //same with destructuring
+// const companyList = companies.map(({name,category,end}) =>
+//     `${name}||${category}||${end}`);
+// console.log(companyList)
 
 
 
