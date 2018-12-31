@@ -21,6 +21,15 @@
 //     console.log('put number of day');
 // }
 
+// let day2 = "tuesday";
+// switch(day2){
+//     case "monday":
+//         console.log("hardest day of week");
+//         break;
+//     case "tuesday":
+//     console.log("little bit easier");
+// }
+
 
 
 // ***********************function****************************8
@@ -47,7 +56,8 @@
 // }
 // console.log(add(3,4));
 
-
+// const toPow2 = x => x*x;
+// console.log(toPow2(2));
 
 //***********************SCOPE
 //scope A
@@ -81,13 +91,13 @@
 
 // **********************************************LOOPs
 //while loop
-// let i = 10;
+// let ii = 10;
 // let a=[];
-// while(i>1){
-//     a.push(i);
-//     console.log(i);
+// while(ii>1){
+//     a.push(ii);
+//     console.log(ii);
 //     con.innerText=a;
-//     i-=1;
+//     ii-=1;
 // }
 
 //do while loop
