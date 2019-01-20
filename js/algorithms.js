@@ -1,4 +1,4 @@
-// //FIBONACCI
+// //******************* FIBONACCI
 // //logging nth fibonacci number
 
 // //Recursion
@@ -28,3 +28,38 @@
 //     }
 // }
 // console.log(fibonacciI(15));
+
+
+// //**************** N!
+// //Recursion
+// function strongR(n){
+//     if(n===0){return 1;}
+//     else if(n>0){
+//         return n*strongR(n-1);
+//     }
+// }
+// console.log(strongR(5));
+
+// //Iteration
+// function strongI(n){
+//     var c = 1;
+//     for(var i=1;i<=n;i++){
+//         c=c*i;
+//     }
+//     return c;
+// }
+// console.log(strongI(6));
+
+
+// //********************* Checking if prime
+// function checkingPrime(n){
+//     var d=0;
+//     for(var i=2;i<Math.sqrt(n)+1;i++){
+//         if(n%i===0){
+//             d++
+//         }
+//     }
+//     if(d===0){return "prime"}
+//     else{return "not prime"}
+// }
+// console.log(checkingPrime(39));
